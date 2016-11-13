@@ -7,14 +7,17 @@ You can use `plotAll.R` or source the files one by one.
 2. source("plot2.R")
 3. source("plot3.R")
 4. source("plot4.R")
-5. source("plot4.R")
-6. source("plot4.R")
+5. source("plot5.R")
+6. source("plot6.R")
 
 Each script is independant, and will download the source data, unzip it and load it as required.
 
 ## Troubleshooting
 ### The zip file doesn't download
 As those R scripts have been developped on a Windows machine, I had to remove the `method="curl"` from the download method. Should you test this script on a Mac or on Linux, you can simply download the zip file manually [here](https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip), put the zip in the same directory as the source files, and run the scripts as indicated above.
+
+### require(ggplot2) fails
+Install it using `install.packages("ggplot2")
 
 
 ## Assignment
