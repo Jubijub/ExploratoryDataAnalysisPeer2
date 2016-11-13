@@ -45,8 +45,7 @@ geom_text(aes(label=round(Emissions,0), size=1, hjust=0.5, vjust="top")) +
 theme(legend.position="none") +
 xlab("Year") +
 ylab(expression('Total PM'[2.5]*" Vehicle-related Emissions in Tons")) +
-ggtitle(expression("PM"[2.5]*" Total emissions from 1999 to 2008 in the US from vehicle related sources\n Comparison between Baltimore City and Los Angeles County ")) + 
-theme(plot.title = element_text(size = 6))
+ggtitle(expression("PM"[2.5]*" Total emissions from 1999 to 2008 in the US - Baltimore City vs Los Angeles County ")) 
 print(g)
 dev.off()
 
