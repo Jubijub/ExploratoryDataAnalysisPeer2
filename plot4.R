@@ -32,13 +32,15 @@ yearlyTotal <- aggregate(Emissions ~ year, NEICoal, sum)
 #I used png + dev.off() method instead of ggsave as it's easier to specify pixel size of the output
 png("./plot4.png", width = 800, height = 800)
 options(scipen=999) # removes scientific notation from the axis
-ggplot(yearlyTotal, aes(year, Emissions)) +
-geom_line(size=2, colour="steelblue") +
+g <- ggplot(yearlyTotal, aes(factor(year), Emissions)) +
+geom_bar(stat="identity", fill="steelblue") +
+geom_text(aes(label=round(Emissions,0), size=0.5, hjust=0.5, vjust="top")) +
+theme(legend.position="none") +
 xlab("Year") +
-ylab(expression('Total PM'[2.5]*" Coal-related Emissions")) +
-ggtitle("PM2.5 Total emissions from 1999 to 2008 in the US from coal related sources ")
+ylab(expression('Total PM'[2.5]*" Coal-related Emissions in Tons")) +
+ggtitle(expression("PM"[2.5]*" Total emissions from 1999 to 2008 in the US from coal related sources "))
+print(g)
 dev.off()
-
 
 
 message("Plot 4 completed")

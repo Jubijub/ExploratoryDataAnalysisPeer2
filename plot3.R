@@ -27,11 +27,12 @@ aggregated <- aggregate(Emissions ~ year + type, baltimore, sum)
 
 #I used png + dev.off() method instead of ggsave as it's easier to specify pixel size of the output
 png("./plot3.png", width = 800, height = 800)
-ggplot(aggregated, aes(year, Emissions, color=type)) +
+g <- ggplot(aggregated, aes(year, Emissions, color=type)) +
 geom_line(size=1) +
 xlab("Year") +
-ylab(expression('Total PM'[2.5]*" Emissions")) +
-ggtitle("PM2.5 Total emissions from 1999 to 2008 for Baltimore (FIPS 24510) by type of source ")
+ylab(expression('Total PM'[2.5]*" Emissions in Tons")) +
+ggtitle(expression("PM"[2.5]*" Total emissions from 1999 to 2008 for Baltimore (FIPS 24510) by type of pollution source"))
+print(g)
 dev.off()
 
 message("Plot 3 completed")

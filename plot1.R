@@ -31,7 +31,14 @@ yearlyTotal <- aggregate(Emissions ~ year, NEI, sum)
 par()
 options(scipen=999) # removes scientific notation from the axis
 png("plot1.png", width = 800, height = 800)
-with(yearlyTotal,plot(year, Emissions, xlim=c(1998, 2008), type="o", lwd=2, col="red", pch=19, main="PM2.5 Total US emissions from 1999 to 2008", xlab="Years", ylab="Total PM2.5 emissions in tons", cex.axis = 1, xaxp=c(1999,2008,3),yaxt="n"))
+with(yearlyTotal,barplot(Emissions, 
+                         names.arg=year,
+                         col="springgreen4",
+                         main=expression("PM"[2.5]*" Total US emissions from 1999 to 2008"), 
+                         xlab="Years", 
+                         ylab=expression("total PM"[2.5]*" emission in Tons"), 
+                         cex.axis = 1, 
+                         yaxt="n"))
 # reduces font size to show large value, and adds a thousand separator for Y axis
 axis(side=2, at=axTicks(2), 
      labels=formatC(axTicks(2), format="d", big.mark=','), cex.axis=0.9)
