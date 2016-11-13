@@ -39,3 +39,11 @@ type: The type of source (point, non-point, on-road, or non-road)
 
 ### Source_Classification_Code.rds
 * mapping between the SCC digit string and the actual name, under different forms
+
+## Results
+![Plot1](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot1.png "Plot1")
+![Plot2](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot2.png "Plot2")
+![Plot3](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot3.png "Plot3")
+![Plot4](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot4.png "Plot4")
+![Plot5](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot5.png "Plot5")
+![Plot6](https://github.com/Jubijub/ExploratoryDataAnalysisPeer2/blob/master/plot6.png "Plot6")
