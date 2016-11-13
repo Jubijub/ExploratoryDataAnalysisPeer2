@@ -1,4 +1,4 @@
-# Exploratory Data Analysis Peer graded assignment #1 by Jubijub
+# Exploratory Data Analysis Peer graded assignment #2 (week 4) by Jubijub
 
 ##Howto
 You can use `plotAll.R` or source the files one by one.
